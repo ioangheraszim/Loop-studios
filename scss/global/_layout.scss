@@ -1,0 +1,9 @@
+@use "../util/" as u;
+
+.container {
+  width: min(100% - 2rem, u.rem(365));
+
+  @include u.breakpoint(desktop) {
+    width: min(100% - 2rem, u.rem(1440));
+  }
+}

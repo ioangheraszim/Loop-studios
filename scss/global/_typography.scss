@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Alata";
+  src: url("../../assets/fonts/Alata-Regular/Alata-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../../assets/fonts/JosefinSans/static/JosefinSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: "Josefin Sans", sans-serif;
+  --font-secondary: "Alata", sans-serif;
+}

@@ -1,0 +1,18 @@
+@use "functions" as f;
+
+$breakpoints: (
+  "mobile": f.em(375),
+  "desktop": f.em(700),
+);
+
+@mixin breakpoint($size) {
+  @media (width >= map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (width < map-get($breakpoints, $size)) {
+    @content;
+  }
+}
