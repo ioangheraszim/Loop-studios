@@ -1,7 +1,7 @@
 @use "../util/" as u;
 
 .header {
-  background-image: url("/assets/images/mobile/image-hero.jpg");
+  background-image: url("../assets/images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100svh;
@@ -14,7 +14,7 @@
 
   @include u.breakpoint(desktop) {
     min-height: u.rem(650);
-    background-image: url("/assets/images/desktop/image-hero.jpg");
+    background-image: url("../assets/images/desktop/image-hero.jpg");
   }
 }
 
