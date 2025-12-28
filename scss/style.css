@@ -162,6 +162,32 @@ li {
   background: transparent;
   border: none;
 }
+.btn__desktop {
+  display: none;
+}
+@media (min-width: 43.75em) {
+  .btn__desktop {
+    display: block;
+  }
+}
+.btn__mobile {
+  width: 50%;
+}
+@media (min-width: 43.75em) {
+  .btn__mobile {
+    display: none;
+  }
+}
+
+.creations__btn {
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  padding: 0.625rem;
+  border: 2px solid black;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
 
 .nav {
   display: flex;
@@ -248,4 +274,97 @@ li {
 .about__info {
   font-family: var(--font-secondary);
   opacity: 0.5;
+}
+
+.creations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.creations img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media (min-width: 43.75em) {
+  .creations {
+    display: inline;
+    flex-direction: row;
+    align-items: self-start;
+  }
+}
+.creations__wrap {
+  text-align: center;
+}
+@media (min-width: 43.75em) {
+  .creations__wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.creations__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  font-family: var(--font-primary);
+}
+.creations__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+@media (min-width: 43.75em) {
+  .creations__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+.creations__item {
+  position: relative;
+  color: var(--white);
+}
+.creations__item:hover {
+  color: var(--black);
+}
+.creations__overlay:hover {
+  opacity: 0.75;
+  background-color: var(--white);
+}
+.creations__name {
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  opacity: 1;
+  line-height: 1;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+@media (min-width: 43.75em) {
+  .creations__name {
+    bottom: 5%;
+    left: 45%;
+    transform: translateX(-50%);
+  }
+}
+.creations__overlay {
+  position: absolute;
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */

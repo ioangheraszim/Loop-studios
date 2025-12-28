@@ -1,1 +1,94 @@
 @use "../util/" as u;
+
+.creations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  @include u.breakpoint(desktop) {
+    display: inline;
+    flex-direction: row;
+    align-items: self-start;
+  }
+  padding: u.rem(32) 0;
+
+  &__wrap {
+    text-align: center;
+    @include u.breakpoint(desktop) {
+      @include u.flex($align: center, $justify: space-between);
+    }
+  }
+
+  &__title {
+    font-size: u.rem(32);
+    text-transform: uppercase;
+    padding: u.rem(32) 0;
+    font-weight: 300;
+    font-family: var(--font-primary);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: u.rem(16);
+    margin: u.rem(32) 0;
+
+    @include u.breakpoint(desktop) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+
+  &__item {
+    position: relative;
+    color: var(--white);
+  }
+
+  &__item:hover {
+    color: var(--black);
+  }
+
+  &__overlay:hover {
+    opacity: 0.75;
+    background-color: var(--white);
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    font-size: u.rem(24);
+    opacity: 1;
+    line-height: 1;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    @include u.breakpoint(desktop) {
+      bottom: 5%;
+      left: 45%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+  }
+}

@@ -4,4 +4,28 @@
   cursor: pointer;
   background: transparent;
   border: none;
+
+  &__desktop {
+    display: none;
+    @include u.breakpoint(desktop) {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    width: 50%;
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
+  }
+}
+
+.creations__btn {
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  padding: u.rem(10);
+  border: 2px solid black;
+  margin: u.rem(32) 0;
+  letter-spacing: 3px;
+  font-weight: 400;
 }
