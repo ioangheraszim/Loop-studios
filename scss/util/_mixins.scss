@@ -2,7 +2,7 @@
 
 $breakpoints: (
   "mobile": f.em(375),
-  "desktop": f.em(700),
+  "desktop": f.em(900),
 );
 
 @mixin breakpoint($size) {

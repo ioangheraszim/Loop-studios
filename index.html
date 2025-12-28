@@ -7,7 +7,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./scss/style.css" />
     <script defer src="main.js"></script>
@@ -15,32 +15,36 @@
   </head>
   <body>
     <header class="header">
-      <nav class="container nav">
-        <img
-          class="nav__logo"
-          src="./assets/images/logo.svg"
-          alt="loop studios logo"
-        />
-        <ul class="nav__items">
-          <li class="nav__item nav__item--top">
-            <img
-              class="nav__logo"
-              src="./assets/images/logo.svg"
-              alt="loop studios logo"
-            />
-            <button id="btn-close" class="btn">
-              <img src="./assets/images/icon-close.svg" alt="" />
-            </button>
-          </li>
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
-        </ul>
-        <button id="btn-open" class="btn">
-          <img src="./assets/images/icon-hamburger.svg" alt="" />
-        </button>
+      <nav class="nav">
+        <div class="container nav__inside">
+          <img
+            class="nav__logo"
+            src="./assets/images/logo.svg"
+            alt="loop studios logo"
+          />
+          <ul class="nav__items">
+            <li class="nav__item nav__item--top">
+              <img
+                class="nav__logo"
+                src="./assets/images/logo.svg"
+                alt="loop studios logo"
+              />
+              <button id="btn-close" class="btn nav__btn-close">
+                <img src="./assets/images/icon-close.svg" alt="" />
+              </button>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Products</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
+          </ul>
+          <button id="btn-open" class="btn nav__btn-open">
+            <img src="./assets/images/icon-hamburger.svg" alt="" />
+          </button>
+        </div>
       </nav>
       <section class="container header__centered">
         <div class="header__hero">
@@ -49,7 +53,7 @@
       </section>
     </header>
     <main class="container">
-      <section id="about" class="about container">
+      <section id="about" class="about">
         <figure class="about__media">
           <picture>
             <source
@@ -72,7 +76,7 @@
           </p>
         </article>
       </section>
-      <section class="container creations">
+      <section class="creations">
         <div class="creations__wrap">
           <h2 class="creations__title">Our creations</h2>
           <button class="btn creations__btn btn__desktop">See All</button>

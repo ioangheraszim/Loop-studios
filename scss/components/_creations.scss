@@ -33,6 +33,10 @@
     padding: u.rem(32) 0;
     font-weight: 300;
     font-family: var(--font-primary);
+
+    @include u.breakpoint(desktop) {
+      font-size: u.rem(48);
+    }
   }
 
   &__grid {

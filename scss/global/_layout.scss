@@ -2,7 +2,7 @@
 
 .container {
   width: min(100% - u.rem(16), u.rem(375));
-  margin: 0 auto;
+  margin-inline: auto;
 
   @include u.breakpoint(desktop) {
     width: min(100% - u.rem(16), u.rem(1110));

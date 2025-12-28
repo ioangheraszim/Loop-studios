@@ -3,6 +3,10 @@
 .about {
   padding: u.rem(74) 0;
 
+  @include u.breakpoint(desktop) {
+    position: relative;
+  }
+
   &__media {
     margin: u.rem(16) 0;
   }
@@ -11,6 +15,15 @@
     background-color: var(--white);
     padding: u.rem(16);
     text-align: center;
+
+    @include u.breakpoint(desktop) {
+      position: absolute;
+      bottom: 5%;
+      right: -5%;
+      max-width: 600px;
+      text-align: start;
+      padding: u.rem(64);
+    }
   }
 
   &__title {
@@ -19,7 +32,11 @@
     font-size: u.rem(32);
     font-weight: 300;
     line-height: 1;
-    padding: u.rem(16);
+    padding: u.rem(16) 0;
+
+    @include u.breakpoint(desktop) {
+      font-size: u.rem(48);
+    }
   }
 
   &__info {

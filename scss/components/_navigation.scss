@@ -1,13 +1,21 @@
 @use "../util/" as u;
 
 .nav {
-  @include u.flex($align: center, $justify: space-between);
+  width: 100%;
+
+  &__inside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+  }
 
   &__items {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    inset: 0;
     height: 100svh;
     background-color: var(--black);
     padding: u.rem(32) u.rem(16);
@@ -22,6 +30,24 @@
     visibility: hidden;
     pointer-events: none;
     transition: transform 0.4s ease, opacity 0.4s ease;
+
+    @include u.breakpoint(desktop) {
+      position: static;
+      height: auto;
+      padding: 0;
+      background: none;
+
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      flex-direction: row;
+      align-items: center;
+      gap: u.rem(32);
+
+      margin-left: auto;
+    }
   }
 
   &__items--active {
@@ -32,10 +58,29 @@
   }
 
   &__item--top {
-    @include u.flex(row, center, space-between);
-    margin-bottom: u.rem(100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: min(100% - u.rem(16), u.rem(375));
-    margin: 0 auto u.rem(100) auto;
+    margin: 0 auto u.rem(100);
+
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__btn-open,
+  &__btn-close {
+    background: none;
+    border: none;
+
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
   }
 
   &__link {
@@ -46,6 +91,13 @@
     position: relative;
     display: inline-block;
     padding-bottom: u.rem(4);
+
+    @include u.breakpoint(desktop) {
+      font-size: u.rem(16);
+      text-transform: none;
+      font-weight: 700;
+      color: var(--white);
+    }
   }
 
   &__link::after {

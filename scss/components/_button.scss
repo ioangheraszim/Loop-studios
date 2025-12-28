@@ -23,9 +23,14 @@
 .creations__btn {
   text-transform: uppercase;
   font-family: var(--font-primary);
-  padding: u.rem(10);
-  border: 2px solid black;
+  padding: u.rem(10) u.rem(40);
+  border: 1px solid var(--black);
   margin: u.rem(32) 0;
   letter-spacing: 3px;
   font-weight: 400;
+}
+
+.creations__btn:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
