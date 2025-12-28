@@ -6,13 +6,20 @@ $breakpoints: (
 );
 
 @mixin breakpoint($size) {
-  @media (width >= map-get($breakpoints, $size)) {
+  @media (min-width: #{map-get($breakpoints, $size)}) {
     @content;
   }
 }
 
 @mixin breakpoint-down($size) {
-  @media (width < map-get($breakpoints, $size)) {
+  @media (max-width: map-get($breakpoints, $size)) {
     @content;
   }
+}
+
+@mixin flex($dir: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
 }

@@ -1,0 +1,29 @@
+@use "../util/" as u;
+
+.about {
+  padding: u.rem(74) 0;
+
+  &__media {
+    margin: u.rem(16) 0;
+  }
+
+  &__content {
+    background-color: var(--white);
+    padding: u.rem(16);
+    text-align: center;
+  }
+
+  &__title {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: u.rem(32);
+    font-weight: 300;
+    line-height: 1;
+    padding: u.rem(16);
+  }
+
+  &__info {
+    font-family: var(--font-secondary);
+    opacity: 0.5;
+  }
+}

@@ -1,9 +1,7 @@
 @use "../util/" as u;
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include u.flex($align: center, $justify: space-between);
 
   &__items {
     position: fixed;
@@ -34,9 +32,7 @@
   }
 
   &__item--top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include u.flex(row, center, space-between);
     margin-bottom: u.rem(100);
     width: min(100% - u.rem(16), u.rem(375));
     margin: 0 auto u.rem(100) auto;
@@ -49,7 +45,7 @@
     color: var(--grey-200);
     position: relative;
     display: inline-block;
-    padding-bottom: 4px;
+    padding-bottom: u.rem(4);
   }
 
   &__link::after {
@@ -58,7 +54,7 @@
     left: 50%;
     bottom: 0;
     width: 0;
-    height: 2px;
+    height: u.rem(2);
     background: var(--white);
     transform: translateX(-50%);
     transition: width 0.3s ease;

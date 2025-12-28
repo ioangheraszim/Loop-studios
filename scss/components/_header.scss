@@ -4,29 +4,45 @@
   background-image: url(../../assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-
   height: 100svh;
   padding: u.rem(32) u.rem(16);
+  position: relative;
+
+  @include u.flex(column, center, center);
 
   @include u.breakpoint(desktop) {
     height: u.rem(650);
     background-image: url(../../assets/images/desktop/image-hero.jpg);
     background-size: cover;
   }
+}
 
-  &__hero {
-    border: 1px solid var(--white);
-    color: var(--white);
-    padding: u.rem(32);
+.header__centered {
+  @include u.flex(column, center, center);
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: inherit;
+}
 
-    @include u.breakpoint(desktop) {
-      width: 350px;
-      margin: u.rem(36) 0;
-    }
+.header__hero {
+  text-align: center;
+  border: u.rem(3) solid var(--white);
+  color: var(--white);
+  padding: u.rem(32);
+  max-width: u.rem(375);
+  width: 100%;
+
+  @include u.breakpoint(desktop) {
+    width: u.rem(300);
+    margin: u.rem(36) 0;
   }
+}
 
-  &__title {
-    text-transform: uppercase;
-    font-weight: 300;
-  }
+.header__title {
+  text-align: start;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: var(--font-primary);
+  font-size: u.rem(42);
+  line-height: 1;
 }
