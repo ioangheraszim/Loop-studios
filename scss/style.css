@@ -72,14 +72,14 @@ li {
 
 @font-face {
   font-family: "Alata";
-  src: url("../../assets/fonts/Alata-Regular/Alata-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Alata-Regular/Alata-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Josefin Sans";
-  src: url("../../assets/fonts/JosefinSans/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/JosefinSans/JosefinSans-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 700;
   font-style: normal;
   font-display: swap;
@@ -100,7 +100,7 @@ li {
 }
 
 .header {
-  background-image: url("../../assets/images/mobile/image-hero.jpg");
+  background-image: url("../assets/images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100svh;
@@ -113,7 +113,7 @@ li {
 @media (min-width: 56.25em) {
   .header {
     min-height: 40.625rem;
-    background-image: url("../../assets/images/desktop/image-hero.jpg");
+    background-image: url("../assets/images/desktop/image-hero.jpg");
   }
 }
 
