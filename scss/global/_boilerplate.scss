@@ -6,6 +6,7 @@
 
 *:not(dialog) {
   margin: 0;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -47,7 +48,9 @@ h6 {
 
 p {
   text-wrap: pretty;
+  font-family: var(--font-primary);
 }
+
 h1,
 h2,
 h3,
@@ -55,6 +58,18 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  font-family: var(--font-secondary);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  font-family: var(--font-primary);
+}
+
+li {
+  list-style-type: none;
 }
 
 #root,
