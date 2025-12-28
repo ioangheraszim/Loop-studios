@@ -1,50 +1,44 @@
-@use "../util/" as u;
+@use "../util" as u;
 
 .creations {
+  padding: u.rem(32) 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
 
   img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     display: block;
   }
 
-  @include u.breakpoint(desktop) {
-    display: inline;
-    flex-direction: row;
-    align-items: self-start;
-  }
-  padding: u.rem(32) 0;
-
   &__wrap {
-    text-align: center;
+    width: 100%;
+    max-width: u.rem(1110);
+    @include u.flex($dir: column, $align: center);
+    margin-bottom: u.rem(32);
+
     @include u.breakpoint(desktop) {
-      @include u.flex($align: center, $justify: space-between);
+      @include u.flex(row, center, space-between);
     }
   }
 
   &__title {
-    font-size: u.rem(32);
+    font-size: clamp(2rem, 1.49rem + 2.177vw, 3rem);
     text-transform: uppercase;
-    padding: u.rem(32) 0;
     font-weight: 300;
     font-family: var(--font-primary);
-
-    @include u.breakpoint(desktop) {
-      font-size: u.rem(48);
-    }
   }
 
   &__grid {
+    width: 100%;
+    max-width: u.rem(1110);
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
     gap: u.rem(16);
-    margin: u.rem(32) 0;
+    margin-bottom: u.rem(32);
 
     @include u.breakpoint(desktop) {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -53,46 +47,65 @@
 
   &__item {
     position: relative;
-    color: var(--white);
-  }
+    cursor: pointer;
+    overflow: hidden;
 
-  &__item:hover {
-    color: var(--black);
-  }
+    &:hover .creations__overlay {
+      opacity: 0.75;
+      background-color: var(--white);
+    }
 
-  &__overlay:hover {
-    opacity: 0.75;
-    background-color: var(--white);
-  }
-
-  &__name {
-    text-transform: uppercase;
-    font-family: var(--font-primary);
-    font-size: u.rem(24);
-    opacity: 1;
-    line-height: 1;
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-
-    @include u.breakpoint(desktop) {
-      bottom: 5%;
-      left: 45%;
-      transform: translateX(-50%);
+    &:hover .creations__name {
+      color: var(--black);
     }
   }
 
   &__overlay {
     position: absolute;
+    inset: 0;
     background-color: var(--black);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
     opacity: 0.3;
     z-index: 1;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 2;
+    color: var(--white);
+    font-size: u.rem(24);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    line-height: 1;
+    transition: color 0.3s ease;
+
+    span {
+      display: block;
+    }
+
+    @include u.breakpoint(desktop) {
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  }
+
+  .btn__desktop {
+    display: none;
+
+    @include u.breakpoint(desktop) {
+      display: inline-block;
+    }
+  }
+
+  .btn__mobile {
+    display: inline-block;
+
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
   }
 }

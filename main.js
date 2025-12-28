@@ -9,3 +9,5 @@ btnOpen.addEventListener("click", () => {
 btnClose.addEventListener("click", () => {
   navItems.classList.remove("nav__items--active");
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();

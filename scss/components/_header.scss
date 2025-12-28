@@ -44,10 +44,6 @@
   text-transform: uppercase;
   font-weight: 300;
   font-family: var(--font-primary);
-  font-size: u.rem(42);
+  font-size: clamp(u.rem(42), u.rem(30) + 2.993vw, u.rem(64));
   line-height: 1;
-
-  @include u.breakpoint(desktop) {
-    font-size: u.rem(64);
-  }
 }

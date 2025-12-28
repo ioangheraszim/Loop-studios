@@ -29,14 +29,10 @@
   &__title {
     font-family: var(--font-primary);
     text-transform: uppercase;
-    font-size: u.rem(32);
+    font-size: clamp(u.rem(32), u.rem(24) + 2.177vw, u.rem(48));
     font-weight: 300;
     line-height: 1;
     padding: u.rem(16) 0;
-
-    @include u.breakpoint(desktop) {
-      font-size: u.rem(48);
-    }
   }
 
   &__info {

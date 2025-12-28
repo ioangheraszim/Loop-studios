@@ -1,5 +1,104 @@
 @use "../util/" as u;
 
 .footer {
+  margin-top: u.rem(72);
   background-color: var(--black);
+  padding: u.rem(72);
+
+  &__inner {
+    @include u.breakpoint(desktop) {
+      display: flex;
+      align-items: start;
+      width: min(100% - 2rem, u.rem(1110));
+      margin: 0 auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include u.breakpoint(desktop) {
+      align-items: start;
+    }
+  }
+
+  &__items {
+    padding: u.rem(32) 0;
+    text-align: center;
+    @include u.breakpoint(desktop) {
+      padding: 0;
+      display: flex;
+    }
+  }
+
+  &__items > :first-child .footer__link {
+    margin: u.rem(16) 0 0 0;
+  }
+
+  &__link {
+    text-transform: none !important;
+    font-size: u.rem(16) !important;
+
+    @include u.breakpoint(desktop) {
+      margin: u.rem(16) 0 u.rem(16) u.rem(16);
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include u.breakpoint(desktop) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__rights {
+    color: var(--grey-200);
+    font-family: var(--font-primary);
+    font-size: u.rem(16);
+    margin-left: auto;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: u.rem(32) u.rem(16);
+    gap: u.rem(32);
+
+    @include u.breakpoint(desktop) {
+      padding: 0 0 u.rem(0);
+      margin-left: auto;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: u.rem(10);
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: u.rem(2);
+    background: var(--white);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &__link:hover::after,
+  &__link:focus::after {
+    width: 100%;
+  }
 }

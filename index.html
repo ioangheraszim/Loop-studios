@@ -94,7 +94,6 @@
               />
               <div class="creations__overlay"></div>
             </picture>
-
             <p class="creations__name">Deep <span>Earth</span></p>
           </a>
           <a href="#" class="creations__item">
@@ -200,49 +199,71 @@
       </section>
     </main>
     <footer class="footer">
-      <nav class="container footer__nav">
-        <img
-          class="footer__logo"
-          src="./assets/images/logo.svg"
-          alt="loop studios logo"
-        />
-        <ul class="footer__items">
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
-        </ul>
-      </nav>
-      <section class="container footer__socials">
-        <ul class="social__items">
-          <li class="social__item">
-            <a class="social__link" href="#"
-              ><img src="./assets/images/icon-facebook.svg" alt="facebook icon"
-            /></a>
-          </li>
-          <li class="social__item">
-            <a href="#"
-              ><img src="./assets/images/icon-twitter.svg" alt="twitter icon"
-            /></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#"
-              ><img
-                src="./assets/images/icon-pinterest.svg"
-                alt="pinterest icon"
-            /></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#"
-              ><img
-                src="./assets/images/icon-instagram.svg"
-                alt="instagram icon"
-            /></a>
-          </li>
-        </ul>
-        <p>© 2021 Loopstudios. All rights reserved.</p>
-      </section>
+      <div class="footer__inner">
+        <nav class="container footer__nav">
+          <img
+            class="footer__logo"
+            src="./assets/images/logo.svg"
+            alt="loop studios logo"
+          />
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a href="#" class="footer__link nav__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link nav__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link nav__link">Events</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link nav__link">Products</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link nav__link">Support</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="container socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <img
+                  src="./assets/images/icon-facebook.svg"
+                  alt="Facebook icon"
+                />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <img
+                  src="./assets/images/icon-twitter.svg"
+                  alt="Twitter icon"
+                />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <img
+                  src="./assets/images/icon-pinterest.svg"
+                  alt="Pinterest icon"
+                />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <img
+                  src="./assets/images/icon-instagram.svg"
+                  alt="Instagram icon"
+                />
+              </a>
+            </li>
+          </ul>
+          <p class="socials__rights">
+            © <span id="year"></span> Loopstudios. All rights reserved.
+          </p>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
